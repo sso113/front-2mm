@@ -82,7 +82,7 @@ const GroupDetail = styled.div`
   width: 300px;
   height: 22px;
   left: 41px;
-  bottom: 490px;
+  bottom: 495px;
 
   font-family: "Inter";
   font-style: normal;
@@ -110,17 +110,23 @@ const OneImage = styled.img`
 
 const One_Name = styled.div`
   position: relative;
-  width: 36px;
-  height: 36px;
-  bottom: 510px;
-  left: 100px;
-  flex-shrink: 0;
-  border-radius: 36px;
+  width: 70px;
+  height: 15px;
+  left: 92px;
+  top: -515px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 15px;
+
+  color: #000000;
 `;
 
 const NextBtn = styled.div`
   position: relative;
-  bottom: 350px;
+  bottom: 330px;
   left: 22px;
 `;
 
@@ -189,10 +195,7 @@ const Signup2_old = () => {
               alt="Upload"
             />
           </label>
-          <OneImage
-            src={`${process.env.PUBLIC_URL}/images/one.svg`}
-            alt="One"
-          />
+          <OneImage alt="One" />
           <input
             type="file"
             id="imageUploadInput"
@@ -201,14 +204,9 @@ const Signup2_old = () => {
             style={{ display: "none" }}
           ></input>
         </OneContainer>
-        <One_Name>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/one_name.svg`}
-            alt="One Name"
-          />
-        </One_Name>
+        <One_Name>김서진</One_Name>
       </WhiteBox>
-      <NextBtn>
+      <NextBtn onClick={handleNextClick}>
         <img src={`${process.env.PUBLIC_URL}/images/nextbtn.svg`} alt="Next" />
       </NextBtn>
     </Container>
